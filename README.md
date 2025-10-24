@@ -1,4 +1,4 @@
-# Work time scanner
+# Work time scanner Desktop version
 
 there's a CLI version of this project [here](https://github.com/iprimavera/Work-time-scanner-CLI)
 
