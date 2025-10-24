@@ -2,10 +2,7 @@
 
 there's a CLI version of this project [here](https://github.com/iprimavera/Work-time-scanner-CLI)
 
-The irrelevant data that the program store is in a folder called `.workTimeScanner`
-in the home directory of the user. The important data is automatically stored as `CSV` in the same
-folder as the program.
+The program keeps some temporary files in a hidden folder called `.workTimeScanner`
+in your home directory. Your main data is automatically saved as CSV files next to the program.
 
-The scanner resets when it's executed in a different day from the last time executed.
-The scanner must be reset if the day has changed since its last reset (before first use of the day).
-
+The scanner must be reset if it remains running when the day changes (i.e., if it wasn't closed at the end of the previous day).
