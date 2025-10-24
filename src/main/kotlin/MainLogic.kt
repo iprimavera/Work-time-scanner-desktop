@@ -18,8 +18,6 @@ class MainLogic {
         if (!existeUsuario(codigo)) { // si no existe lo creo
             return Pantallas.CREAR_USUARIO
         } else if (!files.isConectado(codigo)) {
-//            println("${verde}Bienvenid@ ${usuario.nombre}!$reset")
-//            println("Hoy has trabajado en total ${} hasta ahora")
             files.switchConectado(codigo)
             files.actualizarRegistro()
             return Pantallas.SPLASH_ENTRADA
@@ -31,15 +29,13 @@ class MainLogic {
             files.switchConectado(codigo)
             files.actualizarRegistro()
 
-//            println("${cyan}Hasta luego ${usuario.nombre}!$reset")
-//            println("${cyan}Hoy has trabajado en total ${files.getTotalTime(codigo)} hasta ahora$reset")
             return Pantallas.SPLASH_ENTRADA
         }
     }
 
-    fun isConectado(codigo: String): Boolean {
-        return files.isConectado(codigo)
-    }
+    fun getTotalTime(codigo: String): String = files.getTotalTime(codigo)
+
+    fun isConectado(codigo: String): Boolean = files.isConectado(codigo)
 
     fun crearUsuario(codigo: String, nombre: String, correo: String): Pantallas {
         val newUsuario = Usuario(codigo,nombre,correo)
