@@ -1,5 +1,7 @@
 # Work time scanner
 
+there's a CLI version of this project [here](https://github.com/iprimavera/Work-time-scanner-CLI)
+
 All the data that the program store is in a folder called `.workTimeScanner`
 in the home directory of the user.
 
