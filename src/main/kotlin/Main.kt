@@ -25,7 +25,11 @@ fun main() = application {
 
     logic.cargarUsuarios()
 
-    Window(onCloseRequest = ::exitApplication, title = "Work Time Scanner") {
+    Window(onCloseRequest = ::exitApplication, title = "Work Time Scanner",
+        state = rememberWindowState(
+            placement = WindowPlacement.Maximized
+        )
+    ) {
         MaterialTheme {
             app(logic)
         }
